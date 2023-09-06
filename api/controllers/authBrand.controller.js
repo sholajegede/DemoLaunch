@@ -363,15 +363,20 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const logout = async (req, res) => {
-  res
-    .clearCookie("accessToken", {
-      sameSite: "none",
-      secure: true,
-    })
-    .status(200)
-    .send("Brand has been logged out.");
+export const logout = async (res) => {
+  res.status(200).send("You have been logged out.");
 };
+
+
+//export const logout = async (req, res) => {
+//  res
+//    .clearCookie("accessToken", {
+//      sameSite: "none",
+//      secure: true,
+//    })
+//    .status(200)
+//    .send("Brand has been logged out.");
+//};
 
 export const forgotPassword = async (req, res, next) => {
   try {
