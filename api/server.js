@@ -30,7 +30,7 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: ["http://localhost:3000", "https://test.getcollabo.io", "https://teambeta.getcollabo.io", "http://teambeta.getcollabo.io", "https://beta.getcollabo.io", "https://getcollabo.io", "https://creators.getcollabo.io", /\.getcollabo\.io$/], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000", "https://test.getcollabo.io", "https://admin.getcollabo.io", "https://blog.getcollabo.io", "https://teambeta.getcollabo.io", "http://teambeta.getcollabo.io", "https://beta.getcollabo.io", "https://getcollabo.io", "https://creators.getcollabo.io", /\.getcollabo\.io$/], credentials: true }));
 
 app.use(express.json());
 app.use(cookieParser());
