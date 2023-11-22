@@ -156,10 +156,6 @@ export const register = async (req, res, next) => {
         .json({ error: "This email exists as a brand account" });
     }
 
-    if (!req.body.displayName) {
-      return res.status(400).json({ error: "You need to add a Display Name" });
-    }
-
     if (!req.body.username) {
       return res.status(400).json({ error: "You need to add a Username" });
     }
@@ -189,7 +185,6 @@ export const register = async (req, res, next) => {
       email: req.body.email.toLowerCase(),
       password: hash,
       verified: false,
-      displayName: req.body.displayName,
       username: req.body.username.toLowerCase(),
       termsAndConditionsAccepted: req.body.termsAndConditionsAccepted,
       stripeCustomerId: customer.id,
